@@ -5,13 +5,13 @@
     </div>
 
     <div class="app__footer_icons">
-      <a target="_blank" href="https://www.facebook.com/">
+      <a target="_blank" href="https://www.facebook.com/"  aria-label="Link to Facebook">
         <Icon size="1em" path={mdiFacebook} />
       </a>
-      <a target="_blank" href="https://www.pinterest.com/">
+      <a target="_blank" href="https://www.pinterest.com/"  aria-label="Link to Pinterest">
         <Icon size="1em" path={mdiPinterest} />
       </a>
-      <a target="_blank" href="https://www.instagram.com/">
+      <a target="_blank" href="https://www.instagram.com/"  aria-label="Link to Instagram">
         <Icon size="1em" path={mdiInstagram} />
       </a>
     </div>
