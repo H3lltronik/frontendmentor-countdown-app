@@ -3,9 +3,9 @@
     <h1 class="app_title">WE'RE LAUNCHING SOON</h1>
 
     <div class="app__launcher__numbers">
-        <Counter number="8" legend="days"></Counter>
+        <!-- <Counter number="8" legend="days"></Counter>
         <Counter number="23" legend="hours"></Counter>
-        <Counter number="55" legend="minutes"></Counter>
+        <Counter number="55" legend="minutes"></Counter> -->
         <Counter number="41" legend="seconds"></Counter>
     </div>
   </div>
