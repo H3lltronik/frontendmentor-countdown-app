@@ -1,17 +1,17 @@
 <script>
-    export let number = 0;
+    export let number = "0";
     export let legend = "days";
 </script>
 
 <div class="counter">
     <div class="counter__top">
         <div class="wrapper counter__top_borders">
-            <span class="counter_number">{number}</span>
+            <span class="counter_number">{number.padStart(2, "0")}</span>
         </div>
     </div>
     <div class="counter__bottom">
         <div class="wrapper counter__bottom_borders">
-            <span class="counter_number">{number}</span>
+            <span class="counter_number">{number.padStart(2, "0")}</span>
         </div>
     </div>
     <div class="counter_legend">
