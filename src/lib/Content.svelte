@@ -54,12 +54,12 @@
         days.update(d => d-1)
         return
       }
+
+      setTimeout(tick, 1001);
     }
 
     onMount(() => {
-        interval = setInterval(() => {
           tick();
-        }, 1000);
     });
 
 

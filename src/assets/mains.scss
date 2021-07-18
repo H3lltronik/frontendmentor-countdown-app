@@ -395,6 +395,7 @@ $radius: 5px;
     .counter__bottom {
       transform-origin: center top;
       box-shadow: none !important; // Will cause a shadow in the top since its upsidown
+      border-bottom: 1px solid $shadow;
       // animation: counter-upside-bottom 1s ease infinite forwards;
     }
     .counter__top {
@@ -417,14 +418,14 @@ $radius: 5px;
 }
 
 .actual-top-anim {
-  animation: counter-top 1s ease forwards;
+  animation: counter-top .989s ease forwards;
 }
 .actual-bottom-anim {
-  animation: counter-bottom 1s linear;
+  animation: counter-bottom .989s linear;
 }
 
 .upsidedown-bottom-anim {
-  animation: counter-upside-bottom 1s ease forwards;
+  animation: counter-upside-bottom .989s ease forwards;
 }
 
 @keyframes counter-top {

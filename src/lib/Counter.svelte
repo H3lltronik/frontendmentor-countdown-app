@@ -3,31 +3,27 @@
     export let numberStore = null;
     export let legend = "days";
 
-    let number = 60;
+    let number = 59;
     let prevNumber = 0;
     let actualTop : HTMLElement|null = null;
     let actualBottom : HTMLElement|null = null;
     let upsideBottom : HTMLElement|null = null;
 
-    const addClassAndRemove = (el: HTMLElement, classToAdd: string) => {
-        if ( el.classList.contains(classToAdd) ) {
-            el.classList.remove (classToAdd);
-            return
-        }
-
-        el.classList.add (classToAdd);
-        setTimeout(() => {
-            el.classList.remove (classToAdd);
-        }, 1000);
-    };
+    onMount(() => {
+        actualTop.addEventListener('animationend', () => { actualTop.classList.remove("actual-top-anim") })
+        actualBottom.addEventListener('animationend', () => { actualBottom.classList.remove("actual-bottom-anim") })
+        upsideBottom.addEventListener('animationend', () => { upsideBottom.classList.remove("upsidedown-bottom-anim") })
+    })
 
     numberStore.subscribe(val => {
-        if (actualTop) addClassAndRemove (actualTop, "actual-top-anim");
-        if (actualBottom) addClassAndRemove (actualBottom, "actual-bottom-anim");
-        if (upsideBottom) addClassAndRemove (upsideBottom, "upsidedown-bottom-anim");
+        if (actualTop) actualTop.classList.add("actual-top-anim");
+        if (actualBottom) actualBottom.classList.add("actual-bottom-anim");
+        if (upsideBottom) upsideBottom.classList.add("upsidedown-bottom-anim");
 
-        number = val
-        prevNumber = number -1;
+        setTimeout(() => {
+            number = val
+            prevNumber = number - 1;
+        }, 1000)
     });    
 </script>
 
