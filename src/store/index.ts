@@ -2,7 +2,7 @@ import moment from "moment";
 import { writable } from "svelte/store";
 
 const actualTime = moment().unix();
-const waitTime = moment().add(8, 'days').add(23, 'hours').add(55, 'minutes').add(10, 'second').unix();
+const waitTime = moment().add(8, 'days').add(23, 'hours').add(0, 'minutes').add(6, 'second').unix();
 
 const diffTime = waitTime - actualTime;
 const diffDuration = moment.duration(diffTime*1000, 'millisecond');
